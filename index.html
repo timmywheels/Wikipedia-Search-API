@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <br><br><br><br>
     <div id="container">
     <div id="intro">
         <h1>Wiki Search</h1>
@@ -18,10 +19,10 @@
     </div>
 
     <div id="search-bar">
-        <form action="" method="post">
+        <form action="https://en.wikipedia.org/w/api.php?action=opensearch&search=zyz&limit=10&namespace=0&format=jsonfm" method="post">
             Wiki Search
             <input id="query" name="query" type="text">
-            <input id="clicked" type="submit">
+            <input id="clicked" type="submit" onclick="searchFunction">
         </form>
     </div>
     </div>
