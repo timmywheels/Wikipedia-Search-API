@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Wiki Search</title>
-
+    <script src="app.js"></script>
     <link rel="stylesheet" href="/assets/style.css" type="text/css" />
     <script src="jquery-3.3.1.min.js"></script>
+    <title>Wiki Search</title>
+
+
+
 </head>
 
 <body>
@@ -27,18 +30,18 @@
     </div>
     <script>
         function submit() {
-            const wikiQuery = document.getElementById('query').value;
+    const wikiQuery = document.getElementById('query').value;
+    var api = "https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=opensearch&search=" + wikiQuery + "&format=json&callback=?";
 
-            var api = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + wikiQuery + "&format=json&callback=?";
-            const xhttp = new XMLHttpRequest();
-            console.log(api);
 
-            xhttp.open("GET", api, true);
-            xhttp.setRequestHeader("Content-Type", "application/json");
-
-        }
+    fetch(api).then(function(response) {
+            return response.myJson();
+        })
+        .then(function(response) {
+            console.log(JSON.stringify(response));
+        });
+}
     </script>
 </body>
-<script src="app.js"></script>
 
 </html>
