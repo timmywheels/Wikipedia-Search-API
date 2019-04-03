@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
+    <script src="jquery-3.3.1.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="/public/app.js"></script>
-    <link rel="stylesheet" href="public/assets/style.css" type="text/css" />
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
     <title>Wiki Search</title>
 
 
@@ -28,22 +28,6 @@
             <input id="clicked" type="submit" onclick="submit()">
         </div>
     </div>
-    <script>
-    
-function submit() {
-    const wikiQuery = document.getElementById('query').value;
-    var api = "https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=opensearch&search=" + wikiQuery + "&format=json&callback=?";
-
-    fetch(api).then(response => response.json())
-        .then(data => {
-            console.log(data);
-        });
-}
-   
-    
-
-       
-    </script>
 </body>
 
 </html>
