@@ -13,15 +13,28 @@ function submit() {
             data[1].forEach(function(item) {
                 const listNode = document.createElement('li');
                 listNode.innerHTML = item;
+                listNode.className = 'listElement';
+
+
+
+
+
+                var t = document.createTextNode("");
+                var para = document.createElement('p');
+
+                para.className = "pElement";
+                para.appendChild(t);
+                listNode.appendChild(para);
                 document.getElementById("list").appendChild(listNode);
             });
-            data[2].forEach(function(item) {
-                    var para = document.createElement('P');
-                    var t = document.createTextNode(item);
-                    para.appendChild(t);
-                    document.getElementsByTagName('li').appendChild(para);
+            
+            var named = document.getElementById("list");
+            var tags = named.getElementsByTagName("p");
+            for (var i = 0, n = tags.length; i < n; i = i + 1) {
+                tags[i].innerHTML = data[2][i];
+            }
 
 
-                });
         });
+
 }
