@@ -16,14 +16,23 @@ function submit() {
                 var t = document.createTextNode("");
                 var para = document.createElement('p');
                 para.className = "pElement";
+                var h = document.createElement("h1");
+                h.className = "h1Element";
+                listNode.appendChild(h);
                 para.appendChild(t);
                 listNode.appendChild(para);
                 document.getElementById("list").appendChild(listNode);
+                
             });
             var named = document.getElementById("list");
             var tags = named.getElementsByTagName("p");
             for (var i = 0, n = tags.length; i < n; i = i + 1) {
                 tags[i].innerHTML = data[2][i];
+            }
+            
+            var h1tags = named.getElementsByTagName("h1");
+            for (var i = 0; n = h1tags.length; i = i+ 1) {
+                h1tags[i].innerHTML= `<a href = ${data[3][i]}>${data[3][i]}</a>;`;
             }
         });
     document.getElementById("container").style.display = "none";
