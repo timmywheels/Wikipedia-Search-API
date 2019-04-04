@@ -33,6 +33,8 @@ function submit() {
             for (var i = 0, n = tags.length; i < n; i = i + 1) {
                 tags[i].innerHTML = data[2][i];
             }
+            
+            document.getElementById("container").style.display="none";
 
 
         });

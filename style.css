@@ -1,6 +1,24 @@
 #container{
     text-align:center;
+
 }
 .listElement{
     color:blue;
+    font-size: 40px;
+}
+.pElement{
+    font-size:20px;
+    color:black;
+}
+#list{
+    text-align:center;
+}
+.body{
+    background-color: #ffeaa7;
+}
+#search-heading{
+    font-size: 60px;
+}
+#motto{
+    font-size:30px;
 }
