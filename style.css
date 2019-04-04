@@ -1,20 +1,16 @@
 #container {
     text-align: center;
     align-items: center;
-
-
 }
 
 .listElement {
     font-size: 50px;
     font-family: 'Anton', sans-serif;
-
 }
 
 .pElement {
     font-size: 20px;
     color: #2f3640;
-
 }
 
 #list {
@@ -23,7 +19,6 @@
 
 .body {
     background-color: #fbc531;
-
 }
 
 #search-heading {
@@ -51,11 +46,10 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-
 }
 
-.clicked{
-      background-color: #4CAF50;
+.clicked {
+    background-color: #4CAF50;
     border: none;
     color: #2f3640;
     padding: 18px 18px;

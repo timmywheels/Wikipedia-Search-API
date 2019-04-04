@@ -6,7 +6,6 @@ function submit() {
     fetch(api)
         .then(function(response) {
             return response.json();
-
         })
         .then(function(data) {
             console.log(data);
@@ -14,38 +13,22 @@ function submit() {
                 const listNode = document.createElement('li');
                 listNode.innerHTML = item;
                 listNode.className = 'listElement';
-
-
-
-
-
                 var t = document.createTextNode("");
                 var para = document.createElement('p');
-
                 para.className = "pElement";
                 para.appendChild(t);
                 listNode.appendChild(para);
                 document.getElementById("list").appendChild(listNode);
             });
-
             var named = document.getElementById("list");
             var tags = named.getElementsByTagName("p");
             for (var i = 0, n = tags.length; i < n; i = i + 1) {
                 tags[i].innerHTML = data[2][i];
             }
-
-
-
-
         });
     document.getElementById("container").style.display = "none";
-
     document.getElementById("button-home").style.display = "block";
-
 }
-
 function home() {
     location.reload();
-
-
 }
