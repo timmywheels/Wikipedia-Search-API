@@ -27,16 +27,26 @@ function submit() {
                 listNode.appendChild(para);
                 document.getElementById("list").appendChild(listNode);
             });
-            
+
             var named = document.getElementById("list");
             var tags = named.getElementsByTagName("p");
             for (var i = 0, n = tags.length; i < n; i = i + 1) {
                 tags[i].innerHTML = data[2][i];
             }
-            
-            document.getElementById("container").style.display="none";
+
+
 
 
         });
+    document.getElementById("container").style.display = "none";
+
+    document.getElementById("button-home").style.display = "block";
+    document.getElementById("button-home").style.textAlign = "center";
+
+}
+
+function home() {
+    location.reload();
+
 
 }
