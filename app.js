@@ -26,12 +26,12 @@ function submit() {
             });
             var named = document.getElementById("list");
             var tags = named.getElementsByTagName("p");
-            for (var i = 0, n = tags.length; i < n; i = i + 1) {
+            for (var i = 0; i < tags.length; i++) {
                 tags[i].innerHTML = data[2][i];
             }
             
             var h1tags = named.getElementsByTagName("h1");
-            for (var i = 0; n = h1tags.length; i = i+ 1) {
+            for (var i = 0; i < h1tags.length; i++) {
                 h1tags[i].innerHTML= `<a href = ${data[3][i]}>${data[3][i]}</a>;`;
             }
         });
