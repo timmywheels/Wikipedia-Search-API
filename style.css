@@ -1,20 +1,25 @@
 #container{
     text-align:center;
+    align-items:center;
+
 
 }
 .listElement{
-    color:blue;
-    font-size: 40px;
+    font-size: 50px;
+    font-family: 'Anton', sans-serif;
+ 
 }
 .pElement{
     font-size:20px;
-    color:black;
+    color:#2f3640;
+    
 }
 #list{
     text-align:center;
 }
 .body{
-    background-color: #ffeaa7;
+    background-color: #fbc531;
+  
 }
 #search-heading{
     font-size: 60px;
@@ -22,6 +27,7 @@
 #motto{
     font-size:30px;
 }
-#button-home{
 
+#button-wrap{
+    text-align: center;
 }

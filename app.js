@@ -41,7 +41,7 @@ function submit() {
     document.getElementById("container").style.display = "none";
 
     document.getElementById("button-home").style.display = "block";
-    document.getElementById("button-home").style.textAlign = "center";
+    document.getElementById("button-home").style.display = "center";
 
 }
 
