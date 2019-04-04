@@ -41,6 +41,8 @@
 }
 
 #button-home {
+    position: relative;
+    left: 23px;
     background-color: #4CAF50;
     border: none;
     color: #2f3640;
@@ -50,4 +52,15 @@
     display: inline-block;
     font-size: 16px;
 
+}
+
+.clicked{
+      background-color: #4CAF50;
+    border: none;
+    color: #2f3640;
+    padding: 18px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
